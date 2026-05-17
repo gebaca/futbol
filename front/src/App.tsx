@@ -5,7 +5,7 @@ import gsap from 'gsap';
 function App() {
   const cardRef = useRef(null);
 
-  // Probamos GSAP: La tarjeta aparecerá con un efecto suave
+  // Probamos GSAP: La tarjeta aparecerá con un efecto de deslizamiento suave
   useEffect(() => {
     gsap.fromTo(
       cardRef.current,
@@ -15,15 +15,13 @@ function App() {
   }, []);
 
   return (
-    // bg-slate-950 prueba Tailwind Colors
     <div className='min-h-screen bg-slate-950 flex items-center justify-center p-6 font-sans'>
-      {/* Ref y clases de Tailwind para diseño bilingüe/mobile */}
+      {/* Tarjeta con estilos de Tailwind v4 */}
       <div
         ref={cardRef}
-        className='max-w-md w-full bg-white rounded-4xl p-8 shadow-[0_20px_50px_rgba(8,112,184,0.7)] border border-slate-200'
+        className='max-w-md w-full bg-white rounded-4xl p-8 shadow-[0_20px_50px_rgba(8,112,184,0.3)] border border-slate-200'
       >
         <div className='flex justify-between items-start mb-8'>
-          {/* bg-green-500 prueba Tailwind v4 dynamic mapping */}
           <div className='p-4 bg-green-500 rounded-2xl text-white shadow-lg shadow-green-200'>
             <Trophy size={32} />
           </div>
@@ -37,8 +35,7 @@ function App() {
         </h1>
 
         <p className='text-slate-500 mb-8 font-medium'>
-          Entorno configurado: React + TS + Tailwind + GSAP + Lucide. Listo para
-          el "Gemba".
+          Entorno configurado con éxito: React + TS + Tailwind + GSAP + Lucide.
         </p>
 
         <div className='grid grid-cols-2 gap-4'>
